@@ -22,4 +22,9 @@ public class SaveInPlayerPrefs : MonoBehaviour
     {
         PlayerPrefs.SetString(key, value);
     }
+
+    public void SaveHighScore(int score)
+    {
+        PlayerPrefs.SetInt("highscore", score);
+    }
 }

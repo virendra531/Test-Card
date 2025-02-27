@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 6140592107638898187}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.001, z: 0}
+  m_LocalPosition: {x: 0, y: 0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 3050649234374971536}
   - component: {fileID: 2591238228832938114}
   - component: {fileID: 4006397136866015947}
+  - component: {fileID: 4460638194596949099}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -193,15 +194,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8779615715119560135}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4122106323299422227}
   - {fileID: 8687032011897359707}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
 --- !u!33 &3050649234374971536
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -274,3 +275,30 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &4460638194596949099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8779615715119560135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae7069663b73943998496e6e3a2af16d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 8231347835779444386}
+  id: 0
+  cardFaces:
+  - {fileID: 2800000, guid: 33bf64eef45214480b705d468a57c747, type: 3}
+  - {fileID: 2800000, guid: deb01de92b4d949deab987da6ca4f09e, type: 3}
+  - {fileID: 2800000, guid: 11483d5ab9cb14a0a97c7efe192fc4ab, type: 3}
+  - {fileID: 2800000, guid: 3df7ad1c311194f15aeff5936af740bb, type: 3}
+  - {fileID: 2800000, guid: 1779feda91ba14ede8c5506cc8e5f899, type: 3}
+  - {fileID: 2800000, guid: ca89ff8e5c2e14b55baedaa82a1f296e, type: 3}
+  - {fileID: 2800000, guid: c103808da22f646058be245b7828f429, type: 3}
+  - {fileID: 2800000, guid: 34b9ec022c218473a9e5e6d6a82e3561, type: 3}
+  - {fileID: 2800000, guid: 5aa78fb2cc873461283cb52bc4677a55, type: 3}
+  - {fileID: 2800000, guid: 49589b3f2d1d04e14a460f596f257094, type: 3}
+  isFlipped: 0
+  isMatched: 0

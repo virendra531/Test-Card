@@ -18,10 +18,16 @@ public class GameManager3D : MonoBehaviour
         {
             firstCard = card;
         }
-        else
+        else if (secondCard == null)
         {
             secondCard = card;
             CheckForMatch();
+        }
+        else
+        {
+            // Set the new first card to the third card
+            firstCard = card;
+            secondCard = null;
         }
     }
 
@@ -32,12 +38,6 @@ public class GameManager3D : MonoBehaviour
             // Match found
             firstCard.SetMatched();
             secondCard.SetMatched();
-        }
-        else
-        {
-            // No match, flip cards back
-            firstCard.FlipCard();
-            secondCard.FlipCard();
         }
 
         // Reset selected cards

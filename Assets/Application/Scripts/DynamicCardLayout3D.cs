@@ -13,6 +13,9 @@ public class DynamicCardLayout3D : MonoBehaviour
     void Start()
     {
         // Set up the grid
+        int row = PlayerPrefs.GetInt("row");
+        int column = PlayerPrefs.GetInt("column");
+        gridSize = new Vector2Int(row, column);
         SetupGrid();
     }
 

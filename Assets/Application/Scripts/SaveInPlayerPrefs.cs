@@ -11,16 +11,32 @@ public class SaveInPlayerPrefs : MonoBehaviour
     
     public void SaveRow()
     {
-        Save("row", inputFieldRow.text);
+        int rowValue;
+        if (int.TryParse(inputFieldRow.text, out rowValue))
+        {
+            Save("row", rowValue);
+        }
+        else
+        {
+            Debug.LogError("Invalid input for row");
+        }
     }
     public void SaveColumn()
     {
-        Save("column", inputFieldColumn.text);
+        int columnValue;
+        if (int.TryParse(inputFieldColumn.text, out columnValue))
+        {
+            Save("column", columnValue);
+        }
+        else
+        {
+            Debug.LogError("Invalid input for column");
+        }
     }
 
-    public void Save(string key, string value)
+    public void Save(string key, int value)
     {
-        PlayerPrefs.SetString(key, value);
+        PlayerPrefs.SetInt(key, value);
     }
 
     public void SaveHighScore(int score)

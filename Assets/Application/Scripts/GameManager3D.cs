@@ -7,6 +7,9 @@ public class GameManager3D : MonoBehaviour
     private Card3D firstCard;
     private Card3D secondCard;
 
+    [Header("Score Settings")]
+    public int matchScore = 10; // Points awarded for a match
+
     void Awake()
     {
         Instance = this;
@@ -38,6 +41,9 @@ public class GameManager3D : MonoBehaviour
             // Match found
             firstCard.SetMatched();
             secondCard.SetMatched();
+
+            // Add points to the score
+            Score.Instance.AddScore(matchScore);
         }
 
         // Reset selected cards
